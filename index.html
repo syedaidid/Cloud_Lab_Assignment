@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Group Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,10 +12,14 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">YourName</a>
-      <div class="collapse navbar-collapse">
+      <a class="navbar-brand fw-bold" href="#">Group 1</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#members">Members</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -26,44 +30,188 @@
   <!-- Hero -->
   <section class="hero d-flex align-items-center text-white">
     <div class="container text-center">
-      <h1 class="display-4 fw-bold">Hi, I'm <span class="text-warning">Your Name</span></h1>
-      <p class="lead">Computer Science Student | Web Developer</p>
-      <a href="#projects" class="btn btn-warning btn-lg mt-3">View My Work</a>
+      <p class="text-warning fw-semibold mb-2 letter-spacing">ARC4213 · Cloud Computing Lab</p>
+      <h1 class="display-3 fw-bold mb-3">Team <span class="text-warning">CloudForce</span></h1>
+      <p class="lead mb-4">A group of four CS students exploring cloud deployment with Netlify</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#members" class="btn btn-warning btn-lg px-4">Meet the Team</a>
+        <a href="#projects" class="btn btn-outline-light btn-lg px-4">Our Projects</a>
+      </div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">About Me</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <p class="lead">I'm a final year CS student at UPTM passionate about web development and cybersecurity. This site was deployed using Netlify as part of a cloud deployment lab.</p>
+          <h2 class="fw-bold mb-3">About This Project</h2>
+          <p class="lead text-muted">This site was built and deployed as part of the ARC4213 Cloud Computing lab assessment. Our team of four developed a multi-page web application featuring a group portfolio, a to-do app, and a live weather app — all hosted for free on Netlify.</p>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="row text-center mt-5 g-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-card p-4 rounded-3">
+            <div class="stat-number text-warning">4</div>
+            <div class="text-muted small">Team Members</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card p-4 rounded-3">
+            <div class="stat-number text-warning">3</div>
+            <div class="text-muted small">App Features</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card p-4 rounded-3">
+            <div class="stat-number text-warning">1</div>
+            <div class="text-muted small">Cloud Platform</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card p-4 rounded-3">
+            <div class="stat-number text-warning">∞</div>
+            <div class="text-muted small">Free Hosting</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-5 bg-light">
+  <!-- Members -->
+  <section id="members" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">📝 To-Do App</h5>
-              <p class="card-text">A simple task manager that saves your tasks locally in the browser.</p>
-              <a href="todo.html" class="btn btn-primary">Open App</a>
+      <h2 class="fw-bold text-center mb-2">Meet the Team</h2>
+      <p class="text-center text-muted mb-5">The four people behind this project</p>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Member 1 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="member-card card h-100 text-center border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="avatar mx-auto mb-3" style="background: #6f42c1;">A</div>
+              <h5 class="fw-bold mb-0">Ahmad Placeholder</h5>
+              <p class="text-warning small fw-semibold mb-2">Team Lead</p>
+              <p class="text-muted small">Responsible for project structure, deployment, and coordination.</p>
+              <div class="mt-3">
+                <span class="badge bg-light text-dark me-1">HTML</span>
+                <span class="badge bg-light text-dark me-1">CSS</span>
+                <span class="badge bg-light text-dark">Netlify</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">🌤️ Weather App</h5>
-              <p class="card-text">Live weather info for any city using the OpenWeatherMap API.</p>
-              <a href="weather.html" class="btn btn-primary">Open App</a>
+
+        <!-- Member 2 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="member-card card h-100 text-center border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="avatar mx-auto mb-3" style="background: #0d6efd;">B</div>
+              <h5 class="fw-bold mb-0">Budi Placeholder</h5>
+              <p class="text-warning small fw-semibold mb-2">Frontend Dev</p>
+              <p class="text-muted small">Built the portfolio page layout and Bootstrap styling.</p>
+              <div class="mt-3">
+                <span class="badge bg-light text-dark me-1">Bootstrap</span>
+                <span class="badge bg-light text-dark">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="member-card card h-100 text-center border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="avatar mx-auto mb-3" style="background: #198754;">C</div>
+              <h5 class="fw-bold mb-0">Chua Placeholder</h5>
+              <p class="text-warning small fw-semibold mb-2">App Developer</p>
+              <p class="text-muted small">Developed the to-do app with localStorage task management.</p>
+              <div class="mt-3">
+                <span class="badge bg-light text-dark me-1">JavaScript</span>
+                <span class="badge bg-light text-dark">localStorage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="col-sm-6 col-lg-3">
+          <div class="member-card card h-100 text-center border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="avatar mx-auto mb-3" style="background: #dc3545;">D</div>
+              <h5 class="fw-bold mb-0">Divya Placeholder</h5>
+              <p class="text-warning small fw-semibold mb-2">API Integration</p>
+              <p class="text-muted small">Built the weather app using the OpenWeatherMap API.</p>
+              <div class="mt-3">
+                <span class="badge bg-light text-dark me-1">Fetch API</span>
+                <span class="badge bg-light text-dark">REST API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-2">Our Projects</h2>
+      <p class="text-center text-muted mb-5">Three features built for this lab assessment</p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="project-card card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="project-icon mb-3">👤</div>
+              <h5 class="fw-bold">Group Portfolio</h5>
+              <p class="text-muted small">This page — a team portfolio showcasing all four members, their roles, and contributions.</p>
+              <div class="mt-3">
+                <span class="badge bg-warning text-dark me-1">HTML</span>
+                <span class="badge bg-warning text-dark me-1">CSS</span>
+                <span class="badge bg-warning text-dark">Bootstrap</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <span class="btn btn-sm btn-outline-secondary disabled">You are here</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="project-icon mb-3">📝</div>
+              <h5 class="fw-bold">To-Do App</h5>
+              <p class="text-muted small">A browser-based task manager with add, complete, and delete features. Tasks persist via localStorage.</p>
+              <div class="mt-3">
+                <span class="badge bg-warning text-dark me-1">JavaScript</span>
+                <span class="badge bg-warning text-dark">localStorage</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <a href="todo.html" class="btn btn-sm btn-primary">Open App →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="project-icon mb-3">🌤️</div>
+              <h5 class="fw-bold">Weather App</h5>
+              <p class="text-muted small">Live weather data for any city using the OpenWeatherMap REST API. Shows temperature, humidity, and wind.</p>
+              <div class="mt-3">
+                <span class="badge bg-warning text-dark me-1">Fetch API</span>
+                <span class="badge bg-warning text-dark">REST API</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <a href="weather.html" class="btn btn-sm btn-primary">Open App →</a>
             </div>
           </div>
         </div>
@@ -72,15 +220,41 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-5">
+  <section id="contact" class="py-5 bg-light">
     <div class="container text-center">
-      <h2 class="mb-3">Contact</h2>
-      <p>📧 yourname@student.uptm.edu.my</p>
+      <h2 class="fw-bold mb-2">Contact</h2>
+      <p class="text-muted mb-4">Reach any of us via our student emails</p>
+      <div class="row justify-content-center g-3">
+        <div class="col-sm-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border">
+            <div class="small fw-semibold">Ahmad Placeholder</div>
+            <div class="small text-muted">ahmad@student.uptm.edu.my</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border">
+            <div class="small fw-semibold">Budi Placeholder</div>
+            <div class="small text-muted">budi@student.uptm.edu.my</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border">
+            <div class="small fw-semibold">Chua Placeholder</div>
+            <div class="small text-muted">chua@student.uptm.edu.my</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="p-3 bg-white rounded-3 border">
+            <div class="small fw-semibold">Divya Placeholder</div>
+            <div class="small text-muted">divya@student.uptm.edu.my</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer class="bg-dark text-white text-center py-3">
-    <small>© 2025 YourName — Deployed on Netlify</small>
+    <small>© 2025 Team CloudForce · ARC4213 Cloud Computing · Deployed on Netlify</small>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
