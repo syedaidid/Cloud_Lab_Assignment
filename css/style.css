@@ -1,0 +1,10 @@
+.hero {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+
+.card { transition: transform 0.2s; border-radius: 12px; }
+.card:hover { transform: translateY(-4px); }
