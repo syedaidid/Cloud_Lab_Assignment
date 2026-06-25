@@ -1,3 +1,13 @@
+.navbar .container {
+  position: relative;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .hero {
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
   min-height: 100vh;
